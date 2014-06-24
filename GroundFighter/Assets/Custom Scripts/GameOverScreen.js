@@ -14,6 +14,10 @@ GUI.BeginGroup(new Rect(0,0, Screen.width, Screen.height));
 	var ScreenY = ((Screen.height * 0.5)-(areaHeight * 0.5));
 	
 	GUILayout.BeginArea(Rect(Screen.width/12, Screen.height/3, areaWidth, areaHeight));
+	if(GUILayout.Button("TRY AGAIN"))
+	{
+		Application.LoadLevel("Level1");
+	}
 	
 	if(GUILayout.Button("MAIN MENU"))
 	{

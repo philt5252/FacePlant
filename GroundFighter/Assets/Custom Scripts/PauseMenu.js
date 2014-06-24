@@ -53,6 +53,11 @@ GUI.skin = guiSkin;
 		paused = !paused;
 		Application.LoadLevel("MainMenu");
 	}
+	if(GUILayout.Button("RESTART"))
+	{
+		paused = !paused;
+		Application.LoadLevel(Application.loadedLevel);
+	}
 	
 	if(GUILayout.Button("QUIT"))
 	{
