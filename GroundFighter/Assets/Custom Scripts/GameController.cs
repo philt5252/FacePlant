@@ -31,6 +31,11 @@ public class GameController : MonoBehaviour {
 
 	void FixedUpdate() 
 	{
+		if (Input.GetButtonDown ("FacePlant")) 
+		{
+			Player.AddForce (new Vector2(100,-500));
+		}
+
 		UpdateScore ();
 		if (playerLaunched && (Mathf.Abs (Player.velocity.x) > velocityTolerance || Mathf.Abs(Player.velocity.y) > velocityTolerance)) 
 		{
@@ -51,6 +56,12 @@ public class GameController : MonoBehaviour {
 
 	void UpdateScore()
 	{
-		score = (int)(Player.transform.position.x - playerStartX);
+		int newScore = (int)(Player.transform.position.x - playerStartX);
+
+		if (newScore > score) 
+		{
+			score = newScore;
+		}
+						
 	}
 }
