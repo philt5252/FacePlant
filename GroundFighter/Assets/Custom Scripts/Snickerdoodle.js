@@ -2,6 +2,11 @@
 {
 	if(coll.gameObject.tag == "Player")
 	{
-		animation.Play("snicksdeath");
+		AnimatorSetTrigger(true);
 	}
+}
+
+function AnimatorSetTrigger(OnCollisionEnter2D)
+{
+	OnCollisionEnter2D = true;
 }
