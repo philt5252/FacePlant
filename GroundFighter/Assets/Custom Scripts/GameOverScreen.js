@@ -13,7 +13,7 @@ GUI.BeginGroup(new Rect(0,0, Screen.width, Screen.height));
 	var ScreenX = ((Screen.width *0.5) - (areaWidth *0.5));
 	var ScreenY = ((Screen.height * 0.5)-(areaHeight * 0.5));
 	
-	GUILayout.BeginArea(Rect(Screen.width/12, Screen.height/2, areaWidth, areaHeight));
+	GUILayout.BeginArea(Rect(Screen.width/12, Screen.height/3, areaWidth, areaHeight));
 	
 	if(GUILayout.Button("MAIN MENU"))
 	{
