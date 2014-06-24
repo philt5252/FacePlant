@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 	void Start () 
 	{
 		anim = GetComponent<Animator>();
-		collectItems.AddRange(GameObject.FindGameObjectsWithTag("PickUp"));
+
 
 
 	}
@@ -71,66 +71,6 @@ public class PlayerController : MonoBehaviour
 
 	}
 
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (other.gameObject.tag == "hazard") 
-		{
-			GameObject go = Instantiate(particle, other.transform.position, Quaternion.identity) as GameObject;
-			Destroy(go, 2);
-			other.gameObject.SetActive(false);
-			Dead ();
-		}
-
-		if (other.gameObject.tag == "PickUp") 
-		{
-			GameObject go = Instantiate(particle, other.transform.position, Quaternion.identity) as GameObject;
-			Destroy(go, 2);
-			other.gameObject.SetActive(false);
-			collectItems.Remove(other.gameObject);
-		}
-	}
-
-	void Dead ()
-	{
-		grounded = false;
-		dead = true;
-		anim.SetBool("Dead", dead);
-
-		rigidbody2D.velocity = Vector2.zero;
 
 
-		if(!facingRight)
-		{
-			//Flip ();
-			rigidbody2D.AddForce(new Vector2(100, jumpForce));
-
-		}
-
-		else
-		{
-			//Flip ();
-			rigidbody2D.AddForce(new Vector2(-100, jumpForce));
-					
-		}
-
-		BoxCollider2D box = GetComponent<BoxCollider2D>();
-		box.enabled = false;
-		
-		CircleCollider2D circle = GetComponent<CircleCollider2D>();
-		circle.enabled = false;
-		StartCoroutine ("DeadTimer");
-	}
-
-	void StayDead ()
-	{
-		Debug.Log ("Here");
-		anim.SetBool("StayDead", true);
-	}
-
-	IEnumerator DeadTimer()
-	{
-		yield return new WaitForSeconds(.25f);
-
-		anim.SetBool("StayDead", true);
-	}
 }

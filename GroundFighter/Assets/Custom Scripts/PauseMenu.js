@@ -10,9 +10,9 @@ function Start () {
  
 function Update () {
  
-    if(Input.GetKeyDown(KeyCode.Escape)){
-         paused = !paused;
-       }
+//    if(Input.GetKeyDown(KeyCode.Escape)){
+//         paused = !paused;
+//       }
  
        if(paused)
          Time.timeScale = 0.0001;
@@ -27,28 +27,37 @@ function Update () {
 // JavaScript
 var icon : Texture;
 var frameStyle : GUIStyle;
+var pauseIcon : Texture;
+
  
 function OnGUI () {
+GUI.skin = guiSkin;
+
+	if (GUI.Button(Rect(Screen.width - pauseIcon.width - 10, 10 , pauseIcon.width, pauseIcon.height), pauseIcon))
+		
+		paused = !paused;
  
-       GUI.skin = guiSkin;
+       
  
     if(paused){
  
-  GUI.Box (Rect (Screen.width/2- icon.width/2,Screen.height/2 - icon.height/2, icon.width, icon.height), icon, frameStyle);
+  GUI.Box (Rect (Screen.width/4, 0, Screen.width, Screen.height), icon, frameStyle);
+  
  
-       if (GUI.Button (Rect (Screen.width/2 - icon.width/12,Screen.height/2 - icon.width/8, icon.width/4, icon.height/12), "CONTINUE")) {
+       if (GUI.Button (Rect (Screen.width/2-50,Screen.height/2-50, 150, 50), "CONTINUE")) {
         paused = !paused;
               Time.timeScale = 1;
           
        }
  
-       if (GUI.Button (Rect (Screen.width/2 - icon.width/12,Screen.height/2, icon.width/4, icon.height/12), "MAIN MENU")) {
-         
+       if (GUI.Button (Rect (Screen.width/2-50,Screen.height/2, 150, 50), "MAIN MENU")) {
+          		paused = !paused;
+          		Time.timeScale = 1;
               Application.LoadLevel("MainMenu");
-              Time.timeScale = 1;
+             
        }
  
-       if (GUI.Button (Rect (Screen.width/2 - icon.width/12,Screen.height/2 + icon.width/8,icon.width/4, icon.height/12),"QUIT")) {
+       if (GUI.Button (Rect (Screen.width/2-50,Screen.height/2+50, 150, 50),"QUIT")) {
          Application.Quit();
        }
     }
