@@ -19,7 +19,7 @@ public class SpawnScript : MonoBehaviour {
 
 	void Spawn()
 	{
-		GameObject selectedObject = ObjectCollection [Random.Range (0, ObjectCollection.Length - 1)];
+		GameObject selectedObject = ObjectCollection [Random.Range (0, ObjectCollection.Length)];
 
 		GameObject newObject = Instantiate (selectedObject, transform.position, Quaternion.identity) as GameObject;
 
