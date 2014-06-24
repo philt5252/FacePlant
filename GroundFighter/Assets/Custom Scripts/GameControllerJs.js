@@ -1,21 +1,17 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿#pragma strict
 
-public class GameController : MonoBehaviour {
+var Player : Rigidbody2D;
+var TextSkin : GUISkin;
 
-	public Rigidbody2D Player;
-	public GUISkin TextSkin;
+private var  playerLaunched : boolean = false;
+private var playerAtSpeed : boolean = false;
 
-	private bool playerLaunched = false;
-	private bool playerAtSpeed = false;
-
-	private float velocityTolerance = 0.05f;
-	private float playerStartX;
-	private int score = 0;
-
-
-	// Use this for initialization
-	void Start () 
+private var velocityTolerance : float = 0.05f;
+private var playerStartX : float ;
+private var score : int = 0;
+	
+// Use this for initialization
+	function Start () 
 	{
 		playerStartX = Player.transform.position.x;
 
@@ -24,16 +20,21 @@ public class GameController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	function Update () 
 	{
-
+		
 	}
 
-	void FixedUpdate() 
+	function FixedUpdate() 
 	{
+		//var faceSmashingBar : FaceSmashingBar = this.GetComponent("FaceSmashingBar");
+		
+		
 		if (Input.GetButtonDown ("FacePlant")) 
 		{
-			Player.AddForce (new Vector2(100,-500));
+			var velocity = -5000 * (FaceSmashingBar.currentfaceSmashBar / 100f);
+			Player.AddForce (new Vector2(100,velocity));
+			FaceSmashingBar.currentfaceSmashBar = 0;
 		}
 
 		UpdateScore ();
@@ -48,15 +49,15 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	void OnGUI()
+	function OnGUI()
 	{
 		GUI.skin = TextSkin;
 		GUI.Label (new Rect (0,0,500,500), score.ToString());
 	}
 
-	void UpdateScore()
+	function UpdateScore()
 	{
-		int newScore = (int)(Player.transform.position.x - playerStartX);
+		var newScore = Player.transform.position.x - playerStartX;
 
 		if (newScore > score) 
 		{
@@ -64,4 +65,3 @@ public class GameController : MonoBehaviour {
 		}
 						
 	}
-}

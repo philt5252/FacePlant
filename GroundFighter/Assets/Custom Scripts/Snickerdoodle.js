@@ -1,7 +1,12 @@
 ﻿function OnCollisionEnter2D(coll : Collision2D)
 {
-	if(coll.gameObject.tag == "Player")
+	if(Equals(coll.gameObject.tag, "Player"))
 	{
-		animation.Play("snicksdeath");
+		//Destroy(this.gameObject);
+		//var clip = animation.GetClip("snicksdeath");
+		//animation.clip = clip;
+		//animation.Play("snicksdeath");
+		//animation.Play("snicksdeath");
+		
 	}
 }
