@@ -25,8 +25,7 @@ function Update () {
 }
  
 // JavaScript
-var icon : Texture;
-var frameStyle : GUIStyle;
+
 var pauseIcon : Texture;
 
  
@@ -41,24 +40,24 @@ GUI.skin = guiSkin;
  
     if(paused){
  
-  GUI.Box (Rect (Screen.width/4, 0, Screen.width, Screen.height), icon, frameStyle);
+ 
   
- 
-       if (GUI.Button (Rect (Screen.width/2-50,Screen.height/2-50, 150, 50), "CONTINUE")) {
-        paused = !paused;
-              Time.timeScale = 1;
-          
-       }
- 
-       if (GUI.Button (Rect (Screen.width/2-50,Screen.height/2, 150, 50), "MAIN MENU")) {
-          		paused = !paused;
-          		Time.timeScale = 1;
-              Application.LoadLevel("MainMenu");
-             
-       }
- 
-       if (GUI.Button (Rect (Screen.width/2-50,Screen.height/2+50, 150, 50),"QUIT")) {
-         Application.Quit();
-       }
-    }
+ GUILayout.BeginArea(Rect(Screen.width/2 - Screen.width/3.5, Screen.height/2 - Screen.height/2.5, 500, 500));
+	
+	if(GUILayout.Button("CONTINUE"))
+	{
+		paused = !paused;
+	}
+	if(GUILayout.Button("MAIN MENU"))
+	{
+		paused = !paused;
+		Application.LoadLevel("MainMenu");
+	}
+	
+	if(GUILayout.Button("QUIT"))
+	{
+		Application.Quit();
+	}
+	GUILayout.EndArea();
+}
 }
