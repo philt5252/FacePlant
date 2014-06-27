@@ -62,7 +62,7 @@ function OnGUI()
     GUI.BeginGroup(new Rect (gap, Screen.height - faceSmashBarBG.height*scaleY - gap, faceSmashBarBG.width*scaleX, faceSmashBarBG.height*scaleY));
 		GUI.DrawTexture(Rect (0,0, faceSmashBarBG.width*scaleX, faceSmashBarBG.height*scaleY), faceSmashBarBG);
        
-	       	GUI.BeginGroup(new Rect(0,faceSmashBarFG.height*scaleY-newBarHeight*scaleY, faceSmashBarFG.height*scaleX, faceSmashBarFG.width));
+	       	GUI.BeginGroup(new Rect(0,faceSmashBarFG.height*scaleY - newBarHeight*scaleY, faceSmashBarFG.width*scaleX, faceSmashBarFG.height));
 	         	GUI.DrawTexture(Rect(0,0, faceSmashBarFG.width*scaleX, faceSmashBarFG.height*scaleY), faceSmashBarFG);
 	        		        		
 	        	
