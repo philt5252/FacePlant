@@ -15,7 +15,7 @@ function Update () {
 //       }
  
        if(paused)
-         Time.timeScale = 0.0001;
+         Time.timeScale = 0;
        else
          Time.timeScale = 1;
  

@@ -1,5 +1,10 @@
 ﻿var grounded : boolean;
-function OnCollisionEnter2D(otherCollision2D)
+function OnTriggerStay2D(otherCollision2D)
 {
 	grounded = true;
+}
+
+function OnTriggerExit2D(otherCollision2D)
+{
+	grounded = false;
 }

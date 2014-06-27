@@ -23,7 +23,6 @@ var safeZone = false;
 function Start()
 
 {
-    
     faceSmashBarFGMaxHeight = faceSmashBarFG.height;
    	
     currentfaceSmashBar=0;
@@ -34,7 +33,7 @@ function Start()
     
 }
  //faceSmashBarupdate
-function Update () 
+function LateUpdate () 
 {
 
     if (currentfaceSmashBar < 100)

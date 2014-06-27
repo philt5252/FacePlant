@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Theme song_data" version="1.3.0" audacityversion="2.0.5" sel0="16.5058848118" sel1="16.5058848118" vpos="0" h="0.0000000000" zoom="17.8724135884" rate="44100.0">
+	<tags>
+		<tag name="ENCODER" value="FL Studio"/>
+	</tags>
+	<wavetrack name="Theme song" channel="0" linked="1" mute="0" solo="0" height="147" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="656352">
+				<waveblock start="0">
+					<simpleblockfile filename="e000081e.au" len="350383" min="-0.983917" max="0.989594" rms="0.37848"/>
+				</waveblock>
+				<waveblock start="350383">
+					<simpleblockfile filename="e0000f4a.au" len="305969" min="-0.992126" max="0.95517" rms="0.348266"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Theme song" channel="1" linked="0" mute="0" solo="0" height="153" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="656352">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d7f.au" len="350383" min="-0.990387" max="0.930328" rms="0.386779"/>
+				</waveblock>
+				<waveblock start="350383">
+					<simpleblockfile filename="e000016d.au" len="305969" min="-0.990265" max="0.987885" rms="0.360446"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
