@@ -385,6 +385,7 @@ MonoBehaviour:
   mainmenuSkin: {fileID: 11400000, guid: 1e2cedf6c65fe3642a3182caf993337d, type: 2}
   areaWidth: 500
   areaHeight: 500
+  titleText: {fileID: 1664388749}
 --- !u!114 &1963214755
 MonoBehaviour:
   m_ObjectHideFlags: 0

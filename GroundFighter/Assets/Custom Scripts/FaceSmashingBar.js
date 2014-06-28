@@ -8,13 +8,13 @@ var faceSmashBarFG : Texture2D; //faceSmashBarforeground
 var faceSmashBarFGMaxHeight : float;//the starting width of the foreground bar
 
 
-static var currentfaceSmashBar:float; //the current faceSmashBarstatus
+var currentfaceSmashBar:float; //the current faceSmashBarstatus
 var lanternStatus : Light;
 var scale : float = 0.5;
 var scaleX : float;
 var scaleY : float;
-var baseScreenX : float = 1024;
-var baseScreenY : float = 768;
+var baseScreenX : float = 854;
+var baseScreenY : float = 480;
 var safeZone = false;
 
 
@@ -62,7 +62,7 @@ function OnGUI()
     GUI.BeginGroup(new Rect (gap, Screen.height - faceSmashBarBG.height*scaleY - gap, faceSmashBarBG.width*scaleX, faceSmashBarBG.height*scaleY));
 		GUI.DrawTexture(Rect (0,0, faceSmashBarBG.width*scaleX, faceSmashBarBG.height*scaleY), faceSmashBarBG);
        
-	       	GUI.BeginGroup(new Rect(0,faceSmashBarFG.height*scaleY - newBarHeight*scaleY, faceSmashBarFG.width*scaleX, faceSmashBarFG.height));
+	       	GUI.BeginGroup(new Rect(0,faceSmashBarFG.height*scaleY - newBarHeight*scaleY, faceSmashBarFG.width*scaleX, faceSmashBarFG.height*scaleY));
 	         	GUI.DrawTexture(Rect(0,0, faceSmashBarFG.width*scaleX, faceSmashBarFG.height*scaleY), faceSmashBarFG);
 	        		        		
 	        	

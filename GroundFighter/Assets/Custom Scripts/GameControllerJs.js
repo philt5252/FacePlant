@@ -60,6 +60,7 @@ private var score : int = 0;
 	function OnGUI()
 	{
 		GUI.skin = TextSkin;
+		TextSkin.label.fontSize = Mathf.RoundToInt (100 * Screen.width / 854);
 		GUI.Label (new Rect (0,0,500,500), score.ToString());
 	}
 

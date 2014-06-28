@@ -1,20 +1,16 @@
 ﻿var mainmenuSkin : GUISkin;
 var areaWidth : float;
 var areaHeight: float;
-//var titleScreen : Texture;
+var titleText : GUIText;
 function OnGUI()
 {
-GUI.BeginGroup(new Rect(0,0, Screen.width, Screen.height));
-	         		
-	        		        		
-	        	
-		       GUI.EndGroup();
+	titleText.fontSize = Mathf.RoundToInt(141 *Screen.width/854);
 	GUI.skin = mainmenuSkin;
-	var ScreenX = ((Screen.width *0.5) - (areaWidth *0.5));
-	var ScreenY = ((Screen.height * 0.5)-(areaHeight * 0.5));
+	mainmenuSkin.label.fontSize = Mathf.RoundToInt(43 * Screen.width/854);
 	
-	GUILayout.BeginArea(Rect(Screen.width-Screen.width/2.8, Screen.height/4, areaWidth, areaHeight));
 	
+	GUILayout.BeginArea(Rect(Screen.width- Screen.width/4, Screen.height/2, Screen.width/4, Screen.height/2));
+	mainmenuSkin.button.fontSize = Mathf.RoundToInt(52 * Screen.width/854);	
 	if(GUILayout.Button("START GAME"))
 	{
 		Application.LoadLevel("Level1");

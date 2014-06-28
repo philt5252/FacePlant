@@ -1,7 +1,9 @@
-﻿#pragma strict
+﻿
  
 var paused : boolean;
 var guiSkin : GUISkin;
+var scaleX : int = Mathf.RoundToInt(Screen.width/854);
+var scaleY : int = Mathf.RoundToInt(Screen.height/480);
  
 function Start () {
 
@@ -28,10 +30,12 @@ function Update () {
 
 var pauseIcon : Texture;
 
+
+
  
 function OnGUI () {
 GUI.skin = guiSkin;
-
+guiSkin.button.fontSize  = Mathf.RoundToInt(43 * Screen.width/854);
 	if (GUI.Button(Rect(Screen.width - pauseIcon.width - 10, 10 , pauseIcon.width, pauseIcon.height), pauseIcon))
 		
 		paused = !paused;
@@ -42,7 +46,7 @@ GUI.skin = guiSkin;
  
  
   
- GUILayout.BeginArea(Rect(Screen.width/2 - Screen.width/3.5, Screen.height/2 - Screen.height/2.5, 500, 500));
+ GUILayout.BeginArea(Rect(Screen.width/4, Screen.height/4 , Screen.width/2, Screen.height/2));
 	
 	if(GUILayout.Button("CONTINUE"))
 	{

@@ -1018,7 +1018,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1269442685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .149824768, y: .314612985, z: 0}
+  m_LocalPosition: {x: .490889311, y: .156055093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1042,8 +1042,8 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: Tap to face plant
-  m_Anchor: 0
-  m_Alignment: 0
+  m_Anchor: 4
+  m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
@@ -1053,7 +1053,7 @@ GUIText:
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4280624566
+    rgba: 4279378034
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!1 &1359272829
@@ -1694,6 +1694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   guiSkin: {fileID: 11400000, guid: 1e2cedf6c65fe3642a3182caf993337d, type: 2}
+  scaleX: 0
+  scaleY: 0
   pauseIcon: {fileID: 2800000, guid: 7a716b2cdbca0a042b61c9d785e6ffbf, type: 3}
 --- !u!114 &1963214757
 MonoBehaviour:
@@ -1709,6 +1711,7 @@ MonoBehaviour:
   faceSmashBarBG: {fileID: 2800000, guid: 3177835de6208714389ee1a934f22734, type: 3}
   faceSmashBarFG: {fileID: 2800000, guid: 25dedd5622e47d343bda52157a6a792a, type: 3}
   faceSmashBarFGMaxHeight: 0
+  currentfaceSmashBar: 0
   lanternStatus: {fileID: 0}
   scale: .5
   scaleX: 0
@@ -1934,6 +1937,6 @@ MonoBehaviour:
   - {fileID: 100002, guid: a5440bb77eca407498caa3634d08ae50, type: 2}
   - {fileID: 100000, guid: 5815ff641e694c84fa4d86bb21df6197, type: 2}
   - {fileID: 100000, guid: ddf642e39c70f934c959208ff81e0746, type: 2}
-  MinTime: .5
-  MaxTime: 1
+  MinTime: .100000001
+  MaxTime: .5
   MoveObjAfterSpawn: 0

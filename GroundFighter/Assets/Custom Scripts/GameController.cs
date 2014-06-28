@@ -51,7 +51,8 @@ public class GameController : MonoBehaviour {
 	void OnGUI()
 	{
 		GUI.skin = TextSkin;
-		GUI.Label (new Rect (0,0,500,500), score.ToString());
+		TextSkin.label.fontSize = Mathf.RoundToInt (35 * Screen.width / 854);
+		GUI.Label (new Rect (0,0,Screen.width/16,Screen.height/16), score.ToString());
 	}
 
 	void UpdateScore()
