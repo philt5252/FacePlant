@@ -36,7 +36,7 @@ var pauseIcon : Texture;
 function OnGUI () {
 GUI.skin = guiSkin;
 guiSkin.button.fontSize  = Mathf.RoundToInt(43 * Screen.width/854);
-	if (GUI.Button(Rect(Screen.width - pauseIcon.width - 10, 10 , pauseIcon.width, pauseIcon.height), pauseIcon))
+	if (GUI.Button(Rect(Screen.width - pauseIcon.width - 10, 10 , pauseIcon.width , pauseIcon.height ), pauseIcon))
 		
 		paused = !paused;
  

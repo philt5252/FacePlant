@@ -25,7 +25,7 @@ function Start()
 {
     faceSmashBarFGMaxHeight = faceSmashBarFG.height;
    	
-    currentfaceSmashBar=0;
+    currentfaceSmashBar=100;
     
     scaleX = Screen.width / baseScreenX * scale;
     scaleY = Screen.height / baseScreenY * scale;
@@ -38,7 +38,7 @@ function LateUpdate ()
 
     if (currentfaceSmashBar < 100)
     {
-    currentfaceSmashBar = currentfaceSmashBar + 0.5;
+    currentfaceSmashBar += 1;
     }
   
 }

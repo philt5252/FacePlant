@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour {
 		if (Input.GetButtonDown ("FacePlant")) 
 		{
 			Player.AddForce (new Vector2(100,-500));
+
 		}
 
 		UpdateScore ();

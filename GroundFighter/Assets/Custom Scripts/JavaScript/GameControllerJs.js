@@ -26,14 +26,19 @@ private var score : int = 0;
 	// Update is called once per frame
 	function Update () 
 	{
+		var velocityY : float = Player.velocity.y;
+		var velocityX: float = Player.velocity.x;
 		
+		if( Player.velocity.x < 0 ){
+			Player.velocity.x *= -1;
+		}
 		
-		if (Input.GetButtonDown ("FacePlant")) 
+		 if (Input.GetButtonDown ("FacePlant")) 
 		{
 			
-			var velocity : float = FaceSmashingBar.currentfaceSmashBar/100 * -2500;
-			var foward : float = FaceSmashingBar.currentfaceSmashBar/100 * 500;
-			Player.AddForce (new Vector2(foward , velocity));
+			var newVelocity : float = FaceSmashingBar.currentfaceSmashBar/100 * (-2500 - velocityY);
+			var foward : float = FaceSmashingBar.currentfaceSmashBar/100 * (500 + velocityX);
+			Player.AddForce (new Vector2(foward , newVelocity));
 			FaceSmashingBar.currentfaceSmashBar = 0;
 		}
 

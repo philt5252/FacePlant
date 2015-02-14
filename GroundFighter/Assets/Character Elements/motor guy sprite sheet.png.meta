@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: df6df1c4bbd13e94e96a4792b8ef4d6c
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: motor guy sprite sheet_0
+    21300002: motor guy sprite sheet_1
+    21300004: motor guy sprite sheet_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +39,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -58,6 +63,7 @@ TextureImporter:
         height: 1826
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: motor guy sprite sheet_1
       rect:
         serializedVersion: 2
@@ -67,6 +73,7 @@ TextureImporter:
         height: 1853
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: motor guy sprite sheet_2
       rect:
         serializedVersion: 2
@@ -76,5 +83,6 @@ TextureImporter:
         height: 1743
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
